@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 import { LoadingPagePageRoutingModule } from './loading-page-routing.module';
 
 import { LoadingPagePage } from './loading-page.page';
-import { LandingPage } from '../landing/landing.page';
 
 @NgModule({
   imports: [
