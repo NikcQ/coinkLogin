@@ -19,6 +19,18 @@ const routes: Routes = [
     loadChildren: () =>
       import('./landing/landing.module').then((m) => m.LandingPageModule),
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'telephone',
+    loadChildren: () => import('./telephone/telephone.module').then( m => m.TelephonePageModule)
+  },
+  {
+    path: 'legal-disclaimer',
+    loadChildren: () => import('./legal-disclaimer/legal-disclaimer.module').then( m => m.LegalDisclaimerPageModule)
+  },
 ];
 
 @NgModule({
