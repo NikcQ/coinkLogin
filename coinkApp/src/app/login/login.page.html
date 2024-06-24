@@ -2,12 +2,11 @@
   <ion-toolbar>
     <ion-grid>
       <ion-row>
-        <ion-col size="2">
+        <ion-col size="auto">
           <ion-back-button title=""></ion-back-button>
         </ion-col>
         <ion-col>
-          <ion-title size="4" class=".center">Datos de cuenta
-          </ion-title>
+          <ion-title size="auto" class=".center">Datos de cuenta </ion-title>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -15,107 +14,160 @@
 </ion-header>
 
 <ion-content>
-
   <div class="title">
     <ion-grid>
       <ion-row>
-        <ion-col size="auto"><ion-img src="assets/icon/landing-coink.png" alt="Coink_logo"></ion-img></ion-col>
-        <ion-col size="auto"><ion-title class=".center">¿Cuales son tus datos?</ion-title></ion-col>
+        <ion-col size="auto"
+          ><ion-img
+            src="assets/icon/landing-coink.png"
+            alt="Coink_logo"
+          ></ion-img
+        ></ion-col>
+        <ion-col size="auto"
+          ><ion-title class=".center"
+            >¿Cuales son tus datos?</ion-title
+          ></ion-col
+        >
       </ion-row>
     </ion-grid>
   </div>
 
-  <br>
-  <br>
+  <br />
+  <br />
 
   <div class="container">
-
-
     <ion-text>
       <h3>Documento de Identidad</h3>
     </ion-text>
 
-    <br>
+    <br />
 
     <div class="container">
       <form [formGroup]="form">
-
-        <ion-accordion-group>
-          <ion-accordion value="first">
-            <ion-item slot="header" color="light">
-              <ion-label>Genero</ion-label>
-            </ion-item>
-
-            <ion-radio-group value="" formControlName="document">
-              <ion-radio value="CC">Cedula de ciudadania</ion-radio><br />
-              <ion-radio value="CE">Cedula de extranjeria</ion-radio><br />
-              <ion-radio value="TI">Tarjeta de identidad</ion-radio><br />
-            </ion-radio-group>
-          </ion-accordion>
-        </ion-accordion-group>
+        <div class="spacer">
+          <ion-accordion-group>
+            <ion-accordion value="first">
+              <ion-item slot="header" color="light">
+                <ion-label>Tipo de documento</ion-label>
+              </ion-item>
+              <div class="ion-padding" slot="content">
+                <ion-radio-group value="" formControlName="document">
+                  <ion-radio value="CC">Cedula de Ciudadania</ion-radio><br />
+                  <ion-radio value="CE">Cedula de Extranjeria</ion-radio><br />
+                  <ion-radio value="TI">Tarjeta de Identidad</ion-radio><br />
+                </ion-radio-group>
+              </div>
+            </ion-accordion>
+          </ion-accordion-group>
+        </div>
 
         <ion-item>
-          <ion-input type="text" placeholder="Numero de documento" formControlName="idNumber"></ion-input>
+          <ion-input
+            type="text"
+            placeholder="Numero de documento"
+            formControlName="idNumber"
+          ></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-input type="text" placeholder="Fecha de expedicion del documento"
-            formControlName="expeditionDate"></ion-input>
+          <ion-input
+            type="text"
+            placeholder="Fecha de expedicion del documento"
+            formControlName="expeditionDate"
+          ></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-input type="text" placeholder="Fecha de nacimiento" formControlName="birthDay"></ion-input>
+          <ion-input
+            type="text"
+            placeholder="Fecha de nacimiento"
+            formControlName="birthDay"
+          ></ion-input>
         </ion-item>
 
-        <ion-accordion-group>
-          <ion-accordion value="first">
-            <ion-item slot="header" color="light">
-              <ion-label>Sexo</ion-label>
-            </ion-item>
-            <ion-radio-group value="" formControlName="document">
-              <ion-radio value="CC">Masculino</ion-radio><br />
-              <ion-radio value="CE">Femenino</ion-radio><br />
-            </ion-radio-group>
-          </ion-accordion>
-        </ion-accordion-group>
+        <div class="spacer">
+          <ion-accordion-group>
+            <ion-accordion value="first">
+              <ion-item slot="header" color="light">
+                <ion-label>Tipo de documento</ion-label>
+              </ion-item>
+              <div class="ion-padding" slot="content">
+                <ion-radio-group value="" formControlName="gender">
+                  <ion-radio value="CC">Cedula de Ciudadania</ion-radio><br />
+                  <ion-radio value="CE">Cedula de Extranjeria</ion-radio><br />
+                  <ion-radio value="TI">Tarjeta de Identidad</ion-radio><br />
+                </ion-radio-group>
+              </div>
+            </ion-accordion>
+          </ion-accordion-group>
+        </div>
 
         <ion-text>
           <h3>Configura tu cuenta</h3>
         </ion-text>
 
         <ion-item>
-          <ion-input type="email" placeholder="Correo electronico" formControlName="email"></ion-input>
+          <ion-input
+            type="email"
+            placeholder="Correo electronico"
+            formControlName="email"
+          ></ion-input>
         </ion-item>
-        <ion-label color="danger" *ngIf="form.get('email').touched && form.get('email').errors?.email">Email
-          invalido</ion-label>
-
+        <ion-label
+          color="danger"
+          *ngIf="form.get('email').touched && form.get('email').errors?.email"
+          >Email invalido</ion-label
+        >
 
         <ion-item>
-          <ion-input type="email" placeholder="Confirmar Correo Electronico" formControlName="confirmEmail"></ion-input>
+          <ion-input
+            type="email"
+            placeholder="Confirmar Correo Electronico"
+            formControlName="confirmEmail"
+          ></ion-input>
         </ion-item>
-        <ion-label color="danger"
-          *ngIf="form.get('confirmEmail').touched && form.get('confirmEmail').errors?.email">Email
-          invalido</ion-label>
+        <ion-label
+          color="danger"
+          *ngIf="form.get('confirmEmail').touched && form.get('confirmEmail').errors?.email"
+          >Email invalido</ion-label
+        >
 
-
-        <ion-input type="password" placeholder="PIN de seguridad" formControlName="password">
+        <ion-input
+          type="password"
+          placeholder="PIN de seguridad"
+          formControlName="password"
+        >
           <ion-input-password-toggle slot="end"></ion-input-password-toggle>
         </ion-input>
-        <ion-label color="danger" *ngIf="form.get('password').touched">PIN
-          invalido</ion-label>
+        <ion-label color="danger" *ngIf="form.get('password').touched"
+          >PIN invalido</ion-label
+        >
 
-        <ion-input type="password" placeholder="Confirmar PIN de seguridad" formControlName="confirmPassword">
+        <ion-input
+          type="password"
+          placeholder="Confirmar PIN de seguridad"
+          formControlName="confirmPassword"
+        >
           <ion-input-password-toggle slot="end"></ion-input-password-toggle>
         </ion-input>
-        <ion-label color="danger" *ngIf="form.get('password') != form.get('confirmPassword')">PIN no
-          coincide</ion-label>
-
+        <ion-label
+          color="danger"
+          *ngIf="form.get('password') !== form.get('confirmPassword') && form.get('confirmPassword').touched"
+          >PIN no coincide</ion-label
+        >
       </form>
-
-      <div class="buttonContainer">
-        <ion-button shape="round" color="warning" class="btn" size="full" (click)="login()"
-          [disabled]="!form.valid">Siguiente</ion-button>
-      </div>
     </div>
+  </div>
+
+  <div class="buttonContainer">
+    <ion-button
+      shape="round"
+      color="warning"
+      class="btn"
+      size="full"
+      (click)="login()"
+      [disabled]="!form.valid"
+      >Siguiente</ion-button
+    >
   </div>
 </ion-content>

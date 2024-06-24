@@ -12,6 +12,7 @@ export class LoginPageForm {
       document: ['', [Validators.required]],
       idNumber: ['', [Validators.required]],
       expeditionDate: [''],
+      gender: [''],
       birthDay: [''],
       email: ['', [Validators.required, Validators.email]],
       confirmEmail: ['', [Validators.required, Validators.email]],
