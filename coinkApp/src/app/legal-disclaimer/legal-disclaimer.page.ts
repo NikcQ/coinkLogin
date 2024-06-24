@@ -7,14 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./legal-disclaimer.page.scss'],
 })
 export class LegalDisclaimerPage implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(private router: Router) { }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   login() {
     this.router.navigate(['succes']);
   }
-
 }

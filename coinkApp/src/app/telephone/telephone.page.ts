@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { TelephoneForm } from './telephoneForm';
 
 @Component({
   selector: 'app-telephone',
@@ -7,9 +9,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./telephone.page.scss'],
 })
 export class TelephonePage implements OnInit {
-  constructor(private router: Router) {}
+  
+  form: FormGroup;
+  
+  constructor(private router: Router, private formBuilder: FormBuilder) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.form = new TelephoneForm(this.formBuilder).createForm();
+  }
 
   login() {
     this.router.navigate(['login']);

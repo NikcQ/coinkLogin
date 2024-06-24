@@ -59,6 +59,11 @@
               </div>
             </ion-accordion>
           </ion-accordion-group>
+          <ion-label
+          color="danger"
+          *ngIf="form.get('document').touched && form.get('document').errors?.required"
+          >required</ion-label
+        >
         </div>
 
         <ion-item>
@@ -68,6 +73,11 @@
             formControlName="idNumber"
           ></ion-input>
         </ion-item>
+        <ion-label
+          color="danger"
+          *ngIf="form.get('idNumber').touched && form.get('idNumber').errors?.required"
+          >required</ion-label
+        >
 
         <ion-item>
           <ion-input
@@ -89,13 +99,12 @@
           <ion-accordion-group>
             <ion-accordion value="first">
               <ion-item slot="header" color="light">
-                <ion-label>Tipo de documento</ion-label>
+                <ion-label>Sexo</ion-label>
               </ion-item>
               <div class="ion-padding" slot="content">
                 <ion-radio-group value="" formControlName="gender">
-                  <ion-radio value="CC">Cedula de Ciudadania</ion-radio><br />
-                  <ion-radio value="CE">Cedula de Extranjeria</ion-radio><br />
-                  <ion-radio value="TI">Tarjeta de Identidad</ion-radio><br />
+                  <ion-radio value="CC">Hombre</ion-radio><br />
+                  <ion-radio value="CE">Mujer</ion-radio><br />
                 </ion-radio-group>
               </div>
             </ion-accordion>
@@ -139,8 +148,10 @@
         >
           <ion-input-password-toggle slot="end"></ion-input-password-toggle>
         </ion-input>
-        <ion-label color="danger" *ngIf="form.get('password').touched"
-          >PIN invalido</ion-label
+        <ion-label
+          color="danger"
+          *ngIf="form.get('password').touched && form.get('password').errors?.required"
+          >error</ion-label
         >
 
         <ion-input
@@ -152,8 +163,8 @@
         </ion-input>
         <ion-label
           color="danger"
-          *ngIf="form.get('password') !== form.get('confirmPassword') && form.get('confirmPassword').touched"
-          >PIN no coincide</ion-label
+          *ngIf="form.get('confirmPassword').touched && form.get('confirmPassword').errors?.required"
+          >error</ion-label
         >
       </form>
     </div>
