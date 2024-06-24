@@ -18,6 +18,6 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    this.router.navigate(['legal-disclaimer']);
+    this.router.navigate(['loading-page']);
   }
 }
