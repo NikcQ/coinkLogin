@@ -5,19 +5,22 @@
       </ion-row>
     </ion-grid>
   </div> -->
-  <div class="buttonContainer">
-    <ion-grid>
-      <ion-row size="auto">
-        <ion-img src="assets/icon/landing-coink.png" alt="Coink_logo" class="center"></ion-img>
-      </ion-row>
-      <ion-row>
-        <ion-button shape="round" color="success" class="btn" size="full" (click)="register()">Regístrate</ion-button>
-      </ion-row>
-      <ion-row>
-        <ion-button shape="round" color="warning" class="btn" size="full" (click)="login()">Ingresa</ion-button>
-      </ion-row>
-    </ion-grid>
+
+  <div class="flex-center">
+    <ion-img src="assets/icon/landing-coink.png" alt="Coink_logo" class="img"></ion-img>
+    <div class="buttonContainer">
+      <ion-grid>
+        <ion-row>
+          <ion-button shape="round" color="success" class="btn" size="full" (click)="register()">Regístrate</ion-button>
+        </ion-row>
+        <ion-row>
+          <ion-button shape="round" color="warning" class="btn" size="full" (click)="login()">Ingresa</ion-button>
+        </ion-row>
+      </ion-grid>
 
 
+    </div>
   </div>
+
+
 </ion-content>

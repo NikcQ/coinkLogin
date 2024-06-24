@@ -12,10 +12,10 @@ export class LandingPage implements OnInit {
   ngOnInit() {}
 
   login() {
-    this.router.navigate(['login']);
+    this.router.navigate(['telephone']);
   }
 
   register() {
-    this.router.navigate(['login']);
+    this.router.navigate(['telephone']);
   }
 }

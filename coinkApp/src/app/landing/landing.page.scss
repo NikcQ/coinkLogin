@@ -19,14 +19,16 @@
 }
 
 .imageContainer {
-  max-width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 50;
 }
 
 .img {
   width: 20%;
   height: 20%;
+  position: absolute;
 }
 
 .center {
