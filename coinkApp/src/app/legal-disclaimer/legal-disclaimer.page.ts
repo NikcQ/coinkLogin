@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-legal-disclaimer',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./legal-disclaimer.page.scss'],
 })
 export class LegalDisclaimerPage implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  login() {
+    this.router.navigate(['succes']);
   }
-
 }

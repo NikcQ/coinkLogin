@@ -12,6 +12,25 @@
   gap: 4px;
 }
 
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  gap: 4px;
+}
+
+.spacer {
+  width: 100%;
+  display: block;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
 .abc {
   display: flex;
   justify-content: center;
