@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'legal-disclaimer',
     loadChildren: () => import('./legal-disclaimer/legal-disclaimer.module').then( m => m.LegalDisclaimerPageModule)
   },
+  {
+    path: 'succes',
+    loadChildren: () => import('./succes/succes.module').then( m => m.SuccesPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,26 @@
+.spacer {
+  padding-top: 4rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 1rem;
+}
+
+.textSpacer {
+  padding: 1rem;
+}
+
+.containerMultiple {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.container {
+  padding: 5px;
+}
+
+.text {
+  max-width: 221pt;
+}
